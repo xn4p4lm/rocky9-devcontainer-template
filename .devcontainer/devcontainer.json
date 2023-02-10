@@ -1,0 +1,9 @@
+{
+	"name": "Rocky Linux 9",
+
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"remoteUser": "codespace",
+	"postCreateCommand": ""
+}
