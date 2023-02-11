@@ -18,4 +18,12 @@ RUN useradd -u ${USER_UID} -g ${USER_GID} -d ${HOMEDIR} ${USERNAME}
 RUN dnf -y update
 
 # groupinstall development tools 
-RUN dnf -y groupinstall development
+RUN dnf -y groupinstall development 
+
+# install sudo
+RUN dnf -y install sudo
+
+# Set user for codespace to sudoers
+RUN echo "${USERNAME} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
+## Customization your container after this line ##
