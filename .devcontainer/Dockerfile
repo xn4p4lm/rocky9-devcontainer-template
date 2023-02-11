@@ -20,10 +20,10 @@ RUN dnf -y update
 # groupinstall development tools 
 RUN dnf -y groupinstall development 
 
-# install sudo
-RUN dnf -y install sudo
+# install sudo and nano
+RUN dnf -y install sudo nano vim
 
 # Set user for codespace to sudoers
 RUN echo "${USERNAME} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
-## Customization your container after this line ##
+## Customization your container after this line ##y
